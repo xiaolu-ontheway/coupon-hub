@@ -1,0 +1,54 @@
+.page {
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, #ff6b35, #ff8f3c);
+  padding: 40rpx 32rpx 48rpx;
+  color: #ffffff;
+}
+
+.header-title {
+  font-size: 44rpx;
+  font-weight: 700;
+  margin-bottom: 8rpx;
+}
+
+.header-sub {
+  font-size: 26rpx;
+  opacity: 0.9;
+}
+
+.tabs {
+  display: flex;
+  background: #ffffff;
+  white-space: nowrap;
+  padding: 20rpx 24rpx;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.tab {
+  display: inline-block;
+  padding: 12rpx 32rpx;
+  font-size: 28rpx;
+  color: #555555;
+  border-radius: 32rpx;
+  margin-right: 16rpx;
+  background: #f2f3f5;
+  transition: all 0.2s;
+}
+
+.tab-active {
+  background: linear-gradient(135deg, #ff6b35, #ff8f3c);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.retry-btn {
+  width: 240rpx;
+  margin: 32rpx auto 0;
+  line-height: 76rpx;
+  font-size: 28rpx;
+}

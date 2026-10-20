@@ -1,0 +1,55 @@
+<view class="page">
+  <block wx:if="{{loading}}">
+    <view class="empty">加载中…</view>
+  </block>
+
+  <block wx:elif="{{error}}">
+    <view class="empty">{{error}}</view>
+  </block>
+
+  <block wx:elif="{{coupon}}">
+    <!-- 券面主体 -->
+    <view class="hero">
+      <view class="hero-left">
+        <view class="face-value">{{coupon.face_value}}</view>
+      </view>
+      <view class="hero-right">
+        <view class="title">{{coupon.title}}</view>
+        <view class="platform">{{coupon.platform}}</view>
+      </view>
+    </view>
+
+    <!-- 详情 -->
+    <view class="section">
+      <view class="section-title">优惠详情</view>
+      <view class="desc">{{coupon.description}}</view>
+      <view class="row">
+        <text class="row-label">分类</text>
+        <text class="row-value">{{coupon.category}}</text>
+      </view>
+      <view class="row">
+        <text class="row-label">平台</text>
+        <text class="row-value">{{coupon.platform}}</text>
+      </view>
+      <view class="row" wx:if="{{coupon.coupon_code}}">
+        <text class="row-label">口令</text>
+        <text class="row-value code">{{coupon.coupon_code}}</text>
+      </view>
+      <view class="row" wx:if="{{coupon.start_time}}">
+        <text class="row-label">开始时间</text>
+        <text class="row-value">{{coupon.start_time}}</text>
+      </view>
+      <view class="row" wx:if="{{coupon.end_time}}">
+        <text class="row-label">截止时间</text>
+        <text class="row-value">{{coupon.end_time}}</text>
+      </view>
+    </view>
+
+    <!-- 操作 -->
+    <view class="actions">
+      <view class="btn-primary action-btn" bindtap="onGetCoupon">领取优惠券</view>
+      <view class="btn-secondary action-btn" bindtap="onCopyCode" wx:if="{{coupon.coupon_code}}">复制口令</view>
+      <button class="btn-share action-btn" open-type="share">分享给好友</button>
+    </view>
+  </block>
+</view>

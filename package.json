@@ -1,0 +1,8 @@
+{
+  "name": "coupon-hub",
+  "version": "1.0.0",
+  "description": "优惠券微信小程序：外卖/出行/快递优惠券自动收集与更新",
+  "dependencies": {
+    "@tencent-ai/workbuddy-cloud-sdk": "dev"
+  }
+}

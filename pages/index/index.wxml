@@ -1,0 +1,45 @@
+<view class="page">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="header-title">优惠券集</view>
+    <view class="header-sub">外卖 · 出行 · 快递，天天更新</view>
+  </view>
+
+  <!-- 分类 Tab -->
+  <scroll-view class="tabs" scroll-x="true">
+    <view
+      class="tab {{activeCategory === item.key ? 'tab-active' : ''}}"
+      wx:for="{{categories}}"
+      wx:key="key"
+      data-key="{{item.key}}"
+      bindtap="onCategoryTap"
+    >{{item.label}}</view>
+  </scroll-view>
+
+  <!-- 列表 -->
+  <view class="container">
+    <block wx:if="{{loading}}">
+      <view class="empty">加载中…</view>
+    </block>
+
+    <block wx:elif="{{error}}">
+      <view class="empty">
+        <view>{{error}}</view>
+        <view class="btn-primary retry-btn" bindtap="fetchCoupons">重新加载</view>
+      </view>
+    </block>
+
+    <block wx:elif="{{coupons.length === 0}}">
+      <view class="empty">暂无优惠券</view>
+    </block>
+
+    <block wx:else>
+      <coupon-card
+        wx:for="{{coupons}}"
+        wx:key="id"
+        coupon="{{item}}"
+        bind:tap="onCouponTap"
+      />
+    </block>
+  </view>
+</view>

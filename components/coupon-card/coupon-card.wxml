@@ -1,0 +1,17 @@
+<view class="coupon-card" bindtap="onTap">
+  <view class="coupon-left">
+    <view class="face-value">{{coupon.face_value}}</view>
+    <view class="platform">{{coupon.platform}}</view>
+  </view>
+  <view class="coupon-right">
+    <view class="title">{{coupon.title}}</view>
+    <view class="desc">{{coupon.description}}</view>
+    <view class="meta">
+      <text class="tag">{{coupon.category}}</text>
+      <text class="status {{coupon.status === 'active' ? 'status-active' : 'status-expired'}}">
+        {{coupon.status === 'active' ? '进行中' : '已过期'}}
+      </text>
+      <view class="get-btn">立即领券</view>
+    </view>
+  </view>
+</view>

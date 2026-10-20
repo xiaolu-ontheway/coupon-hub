@@ -1,0 +1,105 @@
+.coupon-card {
+  display: flex;
+  align-items: stretch;
+  background: #ffffff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.coupon-left {
+  width: 200rpx;
+  background: linear-gradient(160deg, #ff6b35, #ff8f3c);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24rpx 16rpx;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.face-value {
+  font-size: 32rpx;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.platform {
+  margin-top: 12rpx;
+  font-size: 22rpx;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.coupon-right {
+  flex: 1;
+  padding: 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 8rpx;
+}
+
+.desc {
+  font-size: 24rpx;
+  color: #888888;
+  line-height: 1.5;
+  margin-bottom: 16rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+}
+
+.get-btn {
+  margin-left: auto;
+  background: linear-gradient(135deg, #ff6b35, #ff8f3c);
+  color: #ffffff;
+  font-size: 24rpx;
+  font-weight: 600;
+  padding: 8rpx 24rpx;
+  border-radius: 32rpx;
+}
+
+.tag {
+  font-size: 22rpx;
+  color: #ff6b35;
+  background: rgba(255, 107, 53, 0.1);
+  padding: 4rpx 14rpx;
+  border-radius: 20rpx;
+  margin-right: 12rpx;
+}
+
+.status {
+  font-size: 22rpx;
+  padding: 4rpx 14rpx;
+  border-radius: 20rpx;
+}
+
+.status-active {
+  color: #22a06b;
+  background: rgba(34, 160, 107, 0.1);
+}
+
+.status-expired {
+  color: #999999;
+  background: rgba(153, 153, 153, 0.12);
+}

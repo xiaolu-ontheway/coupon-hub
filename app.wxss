@@ -1,0 +1,36 @@
+page {
+  background-color: #f5f6f8;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  color: #222222;
+  font-size: 28rpx;
+}
+
+.container {
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+/* 通用按钮 */
+.btn-primary {
+  background: linear-gradient(135deg, #ff6b35, #ff8f3c);
+  color: #ffffff;
+  border-radius: 48rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  line-height: 88rpx;
+  text-align: center;
+  box-shadow: 0 8rpx 20rpx rgba(255, 107, 53, 0.28);
+}
+
+.btn-primary:active {
+  opacity: 0.85;
+}
+
+/* 空状态 */
+.empty {
+  padding: 120rpx 0;
+  text-align: center;
+  color: #999999;
+  font-size: 26rpx;
+}
